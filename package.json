@@ -1,7 +1,7 @@
 {
   "name": "widget-kit",
-  "version": "0.0.0-rc.1",
-  "description": "vs code widget",
+  "version": "0.0.0-rc.2",
+  "description": "empty project, please do not use it.",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
