@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		"noImplicitAny": true,
+		"experimentalDecorators": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+		"strictBindCallApply": true,
+		"strictNullChecks": true,
+		"forceConsistentCasingInFileNames": true,
+    // "types": [],
+    "baseUrl": ".",
+		"paths": {
+      "lib/*": ["./lib/*"]
+    },
+		"module": "commonjs",
+		"moduleResolution": "node",	
+		"preserveConstEnums": true, 
+    "lib": [
+      "dom",
+      "es2020"
+    ],
+    "declaration": true,
+    "target": "es5",
+    "removeComments": false,
+		"sourceMap": false, 
+    "outDir": "./dist"
+	},
+	"include": [
+    "./src/**/*"
+	],
+	"exclude": [
+    "node_modules/*",
+	]
+}
