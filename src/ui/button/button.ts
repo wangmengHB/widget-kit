@@ -3,15 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import 'vs/css!./button';
-import * as DOM from 'vs/base/browser/dom';
-import { StandardKeyboardEvent } from 'vs/base/browser/keyboardEvent';
-import { KeyCode } from 'vs/base/common/keyCodes';
-import { Color } from 'vs/base/common/color';
-import { mixin } from 'vs/base/common/objects';
-import { Event as BaseEvent, Emitter } from 'vs/base/common/event';
-import { Disposable } from 'vs/base/common/lifecycle';
-import { Gesture, EventType } from 'vs/base/browser/touch';
+import './button.css';
+import * as DOM from '../../dom';
+import { StandardKeyboardEvent } from '../../keyboardEvent';
+import { Disposable, Event as BaseEvent, Emitter, KeyCode, objects, Color } from 'util-kit';
+import { Gesture, EventType } from '../../touch';
+
+const { mixin } = objects;
 
 export interface IButtonOptions extends IButtonStyles {
 	title?: boolean;

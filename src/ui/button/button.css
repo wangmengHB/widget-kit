@@ -1,0 +1,19 @@
+
+.monaco-text-button {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 100%;
+	padding: 4px;
+	text-align: center;
+	cursor: pointer;
+	outline-offset: 2px !important;
+}
+
+.monaco-text-button:hover {
+	text-decoration: none !important;
+}
+
+.monaco-button.disabled {
+	opacity: 0.4;
+	cursor: default;
+}

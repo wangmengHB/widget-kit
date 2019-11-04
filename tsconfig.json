@@ -9,11 +9,7 @@
 		"strictBindCallApply": true,
 		"strictNullChecks": true,
 		"forceConsistentCasingInFileNames": true,
-    // "types": [],
     "baseUrl": ".",
-		"paths": {
-      "lib/*": ["./lib/*"]
-    },
 		"module": "commonjs",
 		"moduleResolution": "node",	
 		"preserveConstEnums": true, 

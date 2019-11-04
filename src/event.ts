@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Event as BaseEvent, Emitter } from 'vs/base/common/event';
+import { Event as BaseEvent, Emitter } from 'util-kit';
 
 export type EventHandler = HTMLElement | HTMLDocument | Window;
 

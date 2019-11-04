@@ -3,19 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as browser from 'vs/base/browser/browser';
-import { domEvent } from 'vs/base/browser/event';
-import { IKeyboardEvent, StandardKeyboardEvent } from 'vs/base/browser/keyboardEvent';
-import { IMouseEvent, StandardMouseEvent } from 'vs/base/browser/mouseEvent';
-import { TimeoutTimer } from 'vs/base/common/async';
-import { CharCode } from 'vs/base/common/charCode';
-import { onUnexpectedError } from 'vs/base/common/errors';
-import { Emitter, Event } from 'vs/base/common/event';
-import { Disposable, IDisposable, toDisposable } from 'vs/base/common/lifecycle';
-import * as platform from 'vs/base/common/platform';
-import { coalesce } from 'vs/base/common/arrays';
-import { URI } from 'vs/base/common/uri';
-import { Schemas, RemoteAuthorities } from 'vs/base/common/network';
+import * as browser from './browser';
+import { domEvent } from './event';
+import { IKeyboardEvent, StandardKeyboardEvent } from './keyboardEvent';
+import { IMouseEvent, StandardMouseEvent } from './mouseEvent';
+import { 
+  asyncs, arrays, platform, CharCode, 
+  URI, Schemas, RemoteAuthorities,
+  onUnexpectedError,
+  Emitter, Event,
+  Disposable, IDisposable, toDisposable,
+} from 'util-kit';
+
+
+const { TimeoutTimer } = asyncs;
+
+const { coalesce } = arrays;
 
 export function clearNode(node: HTMLElement): void {
 	while (node.firstChild) {
