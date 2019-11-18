@@ -4,10 +4,10 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './button.css';
-import * as DOM from '../../dom';
-import { StandardKeyboardEvent } from '../../keyboardEvent';
+import * as DOM from '../../browser/dom';
+import { StandardKeyboardEvent } from '../../browser/keyboardEvent';
 import { Disposable, Event as BaseEvent, Emitter, KeyCode, objects, Color } from 'util-kit';
-import { Gesture, EventType } from '../../touch';
+import { Gesture, EventType } from '../../browser/touch';
 
 const { mixin } = objects;
 

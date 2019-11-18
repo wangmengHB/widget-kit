@@ -3,11 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import 'vs/css!./iconlabel';
-import * as dom from 'vs/base/browser/dom';
-import { HighlightedLabel } from 'vs/base/browser/ui/highlightedlabel/highlightedLabel';
-import { IMatch } from 'vs/base/common/filters';
-import { Disposable } from 'vs/base/common/lifecycle';
+import './iconlabel.css';
+import * as dom from '../../browser/dom';
+import { HighlightedLabel } from '../highlightedlabel/highlightedLabel';
+import { Disposable, IMatch } from 'util-kit';
 
 export interface IIconLabelCreationOptions {
 	supportHighlights?: boolean;

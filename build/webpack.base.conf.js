@@ -59,7 +59,15 @@ module.exports = {
                 }
               }
             ]
-          }
+          },
+          {
+            test: /\.(svg|ttf)$/,
+            use: [
+              {
+                loader: 'url-loader',
+              }
+            ]
+          },
         ]
     },
     node: {

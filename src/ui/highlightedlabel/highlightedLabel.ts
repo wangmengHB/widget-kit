@@ -3,9 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as objects from 'vs/base/common/objects';
-import { renderCodicons } from 'vs/base/browser/ui/codiconLabel/codiconLabel';
-import { escape } from 'vs/base/common/strings';
+import { objects, strings } from 'util-kit';
+import { renderCodicons } from '../codiconLabel/codiconLabel';
+const { escape } = strings;
+
 
 export interface IHighlight {
 	start: number;

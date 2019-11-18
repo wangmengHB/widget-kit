@@ -3,9 +3,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as dom from '../dom';
-import { IKeyboardEvent, StandardKeyboardEvent } from '../keyboardEvent';
-import { IMouseEvent, StandardMouseEvent } from '../mouseEvent';
+import * as dom from '../browser/dom';
+import { IKeyboardEvent, StandardKeyboardEvent } from '../browser/keyboardEvent';
+import { IMouseEvent, StandardMouseEvent } from '../browser/mouseEvent';
 import { Disposable } from 'util-kit';
 
 export abstract class Widget extends Disposable {
