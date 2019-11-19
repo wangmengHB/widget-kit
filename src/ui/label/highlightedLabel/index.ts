@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 import { objects, strings } from 'util-kit';
-import { renderCodicons } from '../codiconLabel/codiconLabel';
+import { renderCodicons } from '../codiconLabel';
 const { escape } = strings;
 
 

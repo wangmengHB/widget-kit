@@ -3,18 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import 'vs/css!./selectBox';
+import './selectBox.css';
 
-import { Event } from 'vs/base/common/event';
-import { Widget } from 'vs/base/browser/ui/widget';
-import { Color } from 'vs/base/common/color';
-import { deepClone } from 'vs/base/common/objects';
+import { Event, IDisposable, objects, Color } from 'util-kit';
+import { Widget } from '../widget';
+
 import { IContextViewProvider } from 'vs/base/browser/ui/contextview/contextview';
 import { IListStyles } from 'vs/base/browser/ui/list/listWidget';
 import { SelectBoxNative } from 'vs/base/browser/ui/selectBox/selectBoxNative';
 import { SelectBoxList } from 'vs/base/browser/ui/selectBox/selectBoxCustom';
 import { isMacintosh } from 'vs/base/common/platform';
-import { IDisposable } from 'vs/base/common/lifecycle';
+
+const { deepClone } = objects;
+
 
 
 // Public SelectBox interface - Calls routed to appropriate select implementation class

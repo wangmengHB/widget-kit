@@ -4,8 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 
 import './iconlabel.css';
-import * as dom from '../../browser/dom';
-import { HighlightedLabel } from '../highlightedlabel/highlightedLabel';
+import * as dom from '../../../browser/dom';
+import { HighlightedLabel } from '../highlightedLabel';
 import { Disposable, IMatch } from 'util-kit';
 
 export interface IIconLabelCreationOptions {

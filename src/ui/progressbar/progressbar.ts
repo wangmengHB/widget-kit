@@ -3,13 +3,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import 'vs/css!./progressbar';
-import { Disposable } from 'vs/base/common/lifecycle';
-import { Color } from 'vs/base/common/color';
-import { mixin } from 'vs/base/common/objects';
-import { removeClasses, addClass, hasClass, addClasses, removeClass, hide, show } from 'vs/base/browser/dom';
-import { RunOnceScheduler } from 'vs/base/common/async';
-import { isNumber } from 'vs/base/common/types';
+import './progressbar.css';
+import { Disposable, Color, objects, asyncs, types } from 'util-kit';
+import { 
+  removeClasses, addClass, hasClass, addClasses, removeClass, hide, show 
+} from '../../browser/dom';
+
+const { mixin } = objects;
+const { isNumber } = types;
+
 
 const css_done = 'done';
 const css_active = 'active';
@@ -39,7 +41,7 @@ export class ProgressBar extends Disposable {
 	private bit!: HTMLElement;
 	private totalWork: number | undefined;
 	private progressBarBackground: Color | undefined;
-	private showDelayedScheduler: RunOnceScheduler;
+	private showDelayedScheduler: asyncs.RunOnceScheduler;
 
 	constructor(container: HTMLElement, options?: IProgressBarOptions) {
 		super();
@@ -51,7 +53,7 @@ export class ProgressBar extends Disposable {
 
 		this.progressBarBackground = this.options.progressBarBackground;
 
-		this._register(this.showDelayedScheduler = new RunOnceScheduler(() => show(this.element), 0));
+		this._register(this.showDelayedScheduler = new asyncs.RunOnceScheduler(() => show(this.element), 0));
 
 		this.create(container);
 	}
